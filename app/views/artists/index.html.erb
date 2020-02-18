@@ -1,6 +1,9 @@
 <h1>Artists</h1>
 <ul>
   <% @artists.each do |artist| %>
-    <li><%= link_to artist.name, artist_path(artist) %></li>
+    <!-- /artists/:artist_id/songs-->
+    <!-- displays the songs with valid artist -->
+    <!-- redirects to /artists with invalid artist -->
+    <li><%= link_to artist.name, artist_songs_path(artist) %></li>
   <% end %>
 </ul>

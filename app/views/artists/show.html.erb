@@ -1,6 +1,11 @@
+<!--   GET /artists/id -->
+<!-- links to artists song path -->
+
 <h1><%= @artist.name %></h1>
 <ul>
   <% @artist.songs.each do |song| %>
-    <li><%= song.title %></li>
+    <!-- single song for artist would combine conventions for single artist path and single song path -->
+    <!-- artist_song_path(artist_id, song_id) -->
+    <li><%= link_to song.title, artist_song_path(@artist, song) %></li>
   <% end %>
 </ul>
