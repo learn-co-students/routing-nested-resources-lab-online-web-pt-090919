@@ -4,4 +4,7 @@
 <% end %>
 </ul>
 <br>
+<h6><%= "Song not found" if flash[:alert] %></h6>
+<br>
+<br>
 <%= link_to "Add New Song", new_song_path %>
